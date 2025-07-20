@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>شركة أورينج</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="terms-popup" class="popup">
+        <div class="popup-content">
+            <h1>الشروط والأحكام</h1>
+            <p>يرجى قراءة الشروط والموافقة للمتابعة.</p>
+            <div class="button-container">
+                <button class="agree" onclick="acceptTerms()">أوافق</button>
+                <button class="disagree" onclick="declineTerms()">لا أوافق</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content" class="hidden">
+        <header>
+            <h1>أهلاً بك في شركة أورينج</h1>
+        </header>
+        <main>
+            <form id="robotForm">
+                <label>الاسم الكامل: <input type="text" name="name" required></label><br>
+                <label>الجنس:
+                    <select name="gender" required>
+                        <option value="">اختر</option>
+                        <option value="ذكر">ذكر</option>
+                        <option value="أنثى">أنثى</option>
+                    </select>
+                </label><br>
+                <label>العمر: <input type="number" name="age" required></label><br>
+                <label>الصوت المفضل: <input type="text" name="voice"></label><br>
+                <label>الشكل الخارجي: <input type="text" name="appearance"></label><br>
+                <label>ملاحظات إضافية: <textarea name="notes"></textarea></label><br>
+                <button type="button" onclick="autoFill()">أُفضّل نسخة مطابقة لي تمامًا</button>
+                <button type="submit">اتمم الشراء</button>
+            </form>
+            <p id="confirmation" class="hidden">سيتم اعتماد طلبك والعمل عليه بعد التبصيم في جهازك النقال لكي نتأكد من أنك أنت المشتري وليس شخصًا آخر ليستخدمه باحتياجات أخرى.</p>
+        </main>
+    </div>
+</body>
+</html>
